@@ -52,7 +52,7 @@ function News() {
 			<h2 className='header-title mt-3'>Latest News</h2>
 			<div className='row'>
 				{isLoading && <Loading />}
-				{error && <Error />}
+				{error && <Error error={error} />}
 				{news.map((news, index) => (
 					<div className='col-3 mb-3 mt-2'>
 						<Card key={index} news={news} />
